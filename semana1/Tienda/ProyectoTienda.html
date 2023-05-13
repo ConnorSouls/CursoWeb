@@ -16,6 +16,12 @@
     <img src="img/MapaRegalo.jpg" alt="MapaRegalo" height="260">
     <img src="img/Logo.png" alt="Logo" height="310">
     <h3 align="center">Ya visitaste a los mapaches, ¿quieres algún recuerdo?</h3>
+    <p align="center">
+        ¡Bienvenido a nuestra tienda de regalos! Aquí encontrarás una amplia selección de productos únicos y divertidos inspirados 
+        en Nosotros. Desde camisetas hasta pantuflas. Tenemos todo lo que necesitas para sorprender a tus amigos y familiares con un regalo casi 
+        original y muy divertido. Ven y descubre todo lo que tenemos para ofrecerte en nuestra 
+        tienda de regalos de mapaches para mapaches. ¡Te esperamos con los brazos abiertos!
+    </p>
 <hr>
     <p align="center">Mira nuestro catálogo y llena el formulario para que puedas realizar tu compra :)</p>
 <br>
@@ -81,5 +87,114 @@
         </body>
     </table>
 <hr>
+    <h2 align="center"> Formulario </h2>
+    <h3 align="center">¡¡Elije tu compra!!</h3>
+<form>
+    <fieldset>
+        <legend>¿Que producto te gustó?</legend><br>
+        <label for="producto">Producto:</label>
+        <select name="Selección de Producto" id="Producto">
+            <optgroup label="Playeras">
+                <option value="1">Playera 1</option>
+                <option value="2">Playera 2</option>
+                <option value="3">Playera 3</option>
+                <option value="4">Playera 4</option>
+                <option value="5">Playera 5</option>
+            </optgroup>
+            <optgroup label="Gorras">
+                <option value="6">Gorra 1</option>
+                <option value="7">Gorra 2</option>
+                <option value="8">Gorra 3</option>
+            </optgroup>
+            <optgroup label="Pantuflas">
+                <option value="9">Pantuflas 1</option>
+                <option value="10">Pantuflas 2</option>
+                <option value="11">Pantuflas 3</option>
+            </optgroup>
+            <optgroup label="Pijamas">
+                <option value="12">Pijama 1</option>
+                <option value="13">Pijama 2</option>
+                <option value="14">Pijama 3</option>
+            </optgroup>
+        </select>    
+        <br><br>
+        <label for="# de Piezas">Número de Piezas:
+            <input type="text" name="# de piezas" id="Piezas">
+        </label>
+        <br><br>
+        <label for="Color">Color:
+            <input type="color" name="color" id="color">    
+        </label>
+        <br><br>
+        <label for="Talla">Talla: <br>
+            <input name="talla" type="radio" value="1" id="Chica" > Chica <br>
+            <input name="talla" type="radio" value="2" id="Chica" > Mediana <br>
+            <input name="talla" type="radio" value="3" id="Chica" > Grande <br><br>
+        </label>
+        <label for="Extras">Extras: <br>
+            <input name="envío" type="radio" value="1" id="EntregaRápida" > Entrega Rápida (Costo adicional +100 MapaCoins).<br>
+            <input name="envío" type="radio" value="2" id="EntregaLenta" > Sin costo de envío (Provocará que el tiempo de entrega aumente 
+                significativamente). <br>
+            <input name="Envoltura" type="checkbox"  id="Regalo"> Envoltura de Regalo. <br>
+            <input name="Tarjeta" type="checkbox"  id="Regalo"> Tarjeta de Regalo (Nuestros mapaches más capaces escribirán un bonito poema). <br>
+            <input name="Envoltura" type="checkbox"  id="Regalo"> Envoltura de Regalo.
+        </label> <br><br>
+        <label for="Fecha">Fecha de entrega ideal:
+            <input name="Fecha" type="date" id="Fecha">
+        </label>
+        <br><br>
+        <label for="Carrito de Compras">
+            <button>Añadir al carrito de compras</button>
+        </label>
+        <br>
+    </fieldset>
+    <fieldset>
+        <legend>Datos Personales</legend>
+        <label for="Datos">
+            Nombre: <input maxlength="30" type="text" id="Nombre">
+            <br><br>
+            Correo: <input maxlength="30"type="email" name="Correo" id="CorreoElectrónico">
+            <br><br>
+            Teléfono <input type="tel" name="Teléfono" id="Teléfono" maxlength="12">
+            <br><br>
+            Edad: <input maxlength="2" type="text" id="Edad">
+            <br><br>
+            País de residencia:
+            <select name="Selección de País" id="País">
+                <optgroup label="Norteamérica">
+                    <option value="1">México</option>
+                    <option value="3">Canadá</option>
+                    <option value="2">Estados Unidos</option>
+                </optgroup>
+                <optgroup label="Sudamérica">
+                    <option value="4">Chile</option>
+                    <option value="5">Argentina</option>
+                    <option value="1">Bolivia</option>
+                    <option value="2">Ecuador Unidos</option>
+                    <option value="3">Brazil</option>
+                    <option value="4">Venezuela</option>
+                    <option value="5">Paraguay</option>
+                </optgroup>
+            </select>
+            <br><br>
+            Otro: <input type="text" name="País" id="País" maxlength="15">
+            <br><br>
+            Estado: <input type="text" name="Estado" id="Estado" maxlength="15">
+            <br><br>
+            Dirección:
+            <br>
+            <textarea name="Dirección" id="Dirección" cols="100" rows="4">Escribenos a dónde enviar el producto</textarea>
+
+
+        </label>
+    </fieldset>
+    <button type="submit">Enviar</button>
+    <button type="reset">Borrar</button>
+</form>
+
+
+
+
+
 </body>
 </html>
