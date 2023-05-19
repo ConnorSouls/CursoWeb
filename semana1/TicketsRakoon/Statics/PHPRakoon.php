@@ -78,25 +78,25 @@
         function frase ($imgart)
         {
             if($imgart == "Dua Lipa")
-                echo "Frase 1";
+                echo "Last night, my fantasies become so true";
             if($imgart == "Taylor Swift")
-                echo "Frase 2";
+                echo "We Are Never Getting Back Together";
             if($imgart == "Billie Eilish")
-                echo "Frase 3";
+                echo "What do you want from me? Why don't you run from me?";
             if($imgart == "AJR")
-                echo "Frase 4";
+                echo "Let the game Begin";
             if($imgart == "Artic Monkeys")
-                echo "Frase 5";
+                echo "Do I Wanna Know";
             if($imgart == "BTS")
-                echo "Frase 6";
+                echo "A primera vista podría reconocerte, como si estuviéramos llamándonos el uno al otro.";
             if($imgart == "Bad Bunny")
-                echo "Frase 7";
+                echo "Ya llegó tu tiburón";
             if($imgart == "Harry Styles")
-                echo "Frase 8";
+                echo " No escojas a la persona que todo el mundo cree que es bella, escoge aquella que hace que tu mundo sea bello";
             if($imgart == "Travis Scott")
-                echo "Frase 9";
+                echo "I got those goosebombs everytime";
             if($imgart == "Ariana Grande")
-                echo "Frase 10";
+                echo "Whoever said money can't solve your problems";
         }
 
         function lugar($lugar){
@@ -128,6 +128,7 @@
             echo"<h1>Tus Boletos</h1>";
             if ($varArreglo[5] <16)
             {
+                echo "<p>Son $varArreglo[5] boletos</p>";
                 for($numboletos =  1; $numboletos <= $varArreglo[5]; $numboletos++) 
                 {
                     echo "
@@ -167,7 +168,7 @@
                                 echo"</td>                        
                             </tr>
                         </tbody>
-                    </table>";
+                    </table> <br>";
                 }
             }
             else
