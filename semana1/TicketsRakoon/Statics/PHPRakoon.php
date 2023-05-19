@@ -36,7 +36,7 @@
         
         $imgart = $varArreglo[3];
         $lugar = $varArreglo[6];
-
+        
         function extras( $comida, $Vip, $Royale, $Estacionamiento )
         {
             echo "<ul>";
@@ -75,15 +75,43 @@
                 echo "<img src='img/Ariana.jpg'   alt='Ariana Grande' height='200'>";
         }
 
+        function frase ($imgart)
+        {
+            if($imgart == "Dua Lipa")
+                echo "Frase 1";
+            if($imgart == "Taylor Swift")
+                echo "Frase 2";
+            if($imgart == "Billie Eilish")
+                echo "Frase 3";
+            if($imgart == "AJR")
+                echo "Frase 4";
+            if($imgart == "Artic Monkeys")
+                echo "Frase 5";
+            if($imgart == "BTS")
+                echo "Frase 6";
+            if($imgart == "Bad Bunny")
+                echo "Frase 7";
+            if($imgart == "Harry Styles")
+                echo "Frase 8";
+            if($imgart == "Travis Scott")
+                echo "Frase 9";
+            if($imgart == "Ariana Grande")
+                echo "Frase 10";
+        }
+
         function lugar($lugar){
-        if($lugar == "Palacio de los Deportes")
-            echo '<img src="img/Palacio.jpg" alt="Palacio de los Deportes">';
+        if($lugar == "Palacio de los Deportes" )
+            echo '<img src="img/Palacio.jpg" alt="Palacio de los Deportes" height="200">';
         if($lugar == "Foro Sol")
-            echo '<img src="img/Sol.jpg" alt="Foro Sol">';
+            echo '<img src="img/Sol.jpg" alt="Foro Sol" height="200">';
         if($lugar == "Auditorio Nacional")
-            echo '<img src="img/Aud.jpg" alt="Auditorio Nacional ">';
+            echo '<img src="img/Aud.jpg" alt="Auditorio Nacional" height="200">';
         if($lugar == "Teatro Metropólitan")
-            echo '<img src="img/Teatro.jpg" alt=" Teatro Metropólitan">';
+            echo '<img src="img/Teatro.jpg" alt=" Teatro Metropólitan" height="200">';
+        }
+        
+        function imp(){
+            
         }
 
         for ($i=0; $i <= 6 ; $i++) { 
@@ -94,45 +122,100 @@
             }
         }
 
+
         if($parametros == 0)
         {
-                echo "
-                <h1>Tus Boletos</h1>
-                <table align='center' border='3' style='border-collapse: collapse;' cellpadding=30px>
-                    <thead>
-                        <tr>
-                            <th colspan='4'> Boletos para $varArreglo[3]</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td >$varArreglo[0] $varArreglo[1]</td>
-                            <td>Fecha: $varArreglo[2]</td>
-                            <td rowspan='3'>
-                                Extras: <br>";
-                                extras( $comida, $Vip, $Royale, $Estacionamiento);
-                      echo "</td>
-                            <td rowspan='3'>"; 
-                                imgart($imgart);
+            echo"<h1>Tus Boletos</h1>";
+            if ($varArreglo[5] <16)
+            {
+                for($numboletos =  1; $numboletos <= $varArreglo[5]; $numboletos++) 
+                {
+                    echo "
+                    <table align='center' border='3' style='border-collapse: collapse;' cellpadding=30px>
+                        <thead>
+                            <tr>
+                                <th colspan='4'> Boletos para $varArreglo[3]</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td >$varArreglo[0] $varArreglo[1]</td>
+                                <td>Fecha: $varArreglo[2]</td>
+                                <td rowspan='3'>
+                                    Extras: <br>";
+                                    extras( $comida, $Vip, $Royale, $Estacionamiento);
+                        echo "</td>
+                                <td rowspan='3'>"; 
+                                    imgart($imgart);
+                                    echo "</td>
+                            </tr>
+                            <tr>
+                                <td>$varArreglo[6]</td>
+                                <td>Zona: $varArreglo[4]</td>
+                            </tr>
+                            <tr>
+                                <td>";
+                                    lugar($lugar);
                                 echo "</td>
-                        </tr>
-                        <tr>
-                            <td>$varArreglo[6]</td>
-                            <td>Zona: $varArreglo[4]</td>
-                        </tr>
-                        <tr>
-                            <td>";
-                                lugar($lugar);
-                            echo "</td>
-                            <td>";
-                            echo '<img src="img/ZonaRakoon.jpg" alt="Zonas" height="100">';
-                            echo "</td>
-                        </tr>
-                        <tr>
-                            <td align='center' colspan='4'>frase</td>                        
-                        </tr>
-                    </tbody>
-                </table>";
+                                <td>";
+                                echo '<img src="img/ZonaRakoon.jpg" alt="Zonas" height="100">';
+                                echo "</td>
+                            </tr>
+                            <tr>
+                                <td align='center' colspan='4'>";
+                                frase($imgart);
+                                echo"</td>                        
+                            </tr>
+                        </tbody>
+                    </table>";
+                }
+            }
+            else
+            {
+                echo "<p>SON MUCHO BOLETOS, TE IMPRIMO 15 de $varArreglo[5]</p>";
+                for ($numboletos =  1; $numboletos <= 15; $numboletos++)
+                {
+                    
+                    echo "
+                    <table align='center' border='3' style='border-collapse: collapse;' cellpadding=30px>
+                        <thead>
+                            <tr>
+                                <th colspan='4'> Boletos para $varArreglo[3]</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td >$varArreglo[0] $varArreglo[1]</td>
+                                <td>Fecha: $varArreglo[2]</td>
+                                <td rowspan='3'>
+                                    Extras: <br>";
+                                    extras( $comida, $Vip, $Royale, $Estacionamiento);
+                        echo "</td>
+                                <td rowspan='3'>"; 
+                                    imgart($imgart);
+                                    echo "</td>
+                            </tr>
+                            <tr>
+                                <td>$varArreglo[6]</td>
+                                <td>Zona: $varArreglo[4]</td>
+                            </tr>
+                            <tr>
+                                <td>";
+                                    lugar($lugar);
+                                echo "</td>
+                                <td>";
+                                echo '<img src="img/ZonaRakoon.jpg" alt="Zonas" height="100">';
+                                echo "</td>
+                            </tr>
+                            <tr>
+                                <td align='center' colspan='4'>";
+                                frase($imgart);
+                                echo"</td>                        
+                            </tr>
+                        </tbody>
+                    </table>";
+                }
+            }
         }
                
         
