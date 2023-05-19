@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicketsRakoon</title>
+    <link rel="icon" href="https://yt3.googleusercontent.com/ytc/AGIKgqM_L_75YNhA-fOb6jhS_M9mouexUF1BjJrh3DJ9dQ=s900-c-k-c0x00ffffff-no-rj">
+</head>
+<body>
+    <center><h1>TicketsRakoon</h1></center>
+    <span>
+        En vista de la aparente escasez de una página funcional dedicada a la venta de boletos para los eventos de nuestros artistas favoritos... 
+        Toma esta página como un regalo del cielo.
+    </span>
+    <p>Llena el formulario y disfruta de una experiencia inolvidable!!!</p>
+    <form action="./PHPRakoon.php" method="post">
+        <fieldset>
+            <legend>Empezemos</legend> 
+            <label for="Nombre">Nombre: </label>
+                <input type="text" name="nombre" id="datatext" maxlength="35"><br><br>
+            <label for="Apellido">Apellido: </label>
+                <input type="text" name="apellido" id="datatext" maxlength="35"><br><br>
+            <label for="Fecha">Fecha: </label>
+                <input type="date" name="fecha" id="date" maxlength="35"><br><br>
+            <label for="famosos">Dueñ@ de tus fanasías más oscuras: </label>  
+            <select name="artista" id="select">
+                <optgroup label="GOD">
+                    <option value="Dua Lipa">Dua Lipa</option>
+                    <option value="Taylor Swift">Taylor Swift</option>
+                    <option value="Billie Eilish">Billie Eilish</option>
+                    <option value="AJR">AJR</option>
+                    <option value="Artic Monkeys">Artic Monkeys</option>
+                </optgroup> 
+                <optgroup label="ZZZ">
+                    <option value="BTS">BTS</option>
+                    <option value="Bad Bunny">Bad Bunny</option>
+                    <option value="Harry Styles">Harry Styles</option>
+                    <option value="Travis Scott">Travis Scott</option>
+                    <option value="Ariana Grande">Ariana Grande</option>
+                </optgroup>
+            </select><br><label for="chiste">ChatGPT me dio la selección, yo soy un mapache, no sé de música</label><br><br>
+            <label for="zona">Selecciona la zona de tu boleto: </label>
+            <select name="zona" id="select">
+                <option value="Roja">Roja</option>
+                <option value="Azul">Azul</option>
+                <option value="Verde">Verde</option>
+                <option value="Blanca">Blanca</option>
+                <option value="Lila">Lila</option>
+                <option value="Naranja">Naranja</option>
+                <option value="Amarilla">Amarilla</option>
+            </select><br>
+            <img src="img/ZonaRakoon.jpg" alt="Zonas" height="310px">
+            <br><br>
+            <label for="NumBoletos">Número de boletos: </label>
+                <input type="text" name="numboletos" id="datatext" maxlength="5"><br><br>
+            <label for="Lugar">Lugar:</label><br>
+
+                <input name="lugar" type="radio" value="Palacio de los Deportes" > Palacio de los Deportes <br>
+                <input name="lugar" type="radio" value="Foro Sol" > Foro Sol <br>
+                <input name="lugar" type="radio" value="Auditorio Nacional" > Auditorio Nacional <br>
+                <input name="lugar" type="radio" value="Teatro Metropólitan" > Teatro Metropólitan <br><br>
+            
+                <label for="Extras">Extras: </label><br>
+                <input name="comida"          type="checkbox" value="1" id="checkbox" > Paquete con comida <br>
+                <input name="Vip"             type="checkbox" value="1" id="checkbox" > Paquete Vip <br>  
+                <input name="Royale"          type="checkbox" value="1" id="checkbox" > Autografos <br>
+                <input name="Estacionamiento" type="checkbox" value="1" id="checkbox" > Estacionamiento <br><br>
+            <button type="submit">$$$Comprar$$$</button>
+            <button type="submit">Borrar</button>
+        </fieldset>
+    </form>
+
+
+
+</body>
+</html>
