@@ -82,7 +82,7 @@ article{
     color: rgb(220, 177, 255);
     height: 1050px;
     background-color: #ec9fff;
-    background-image: url(./multimedia/img/Wh40k.jpeg);
+    background-image: url(../multimedia/img/Wh40k.jpeg);
     overflow: hidden;
 }
 .mapaches{
@@ -92,7 +92,7 @@ article{
 }
 .AJR{
     height: 730px;
-    background-image: url(./Multimedia/img/AJR.jpg);
+    background-image: url(../Multimedia/img/AJR.jpg);
 }
 .temaFav{
     height: 300px;  
